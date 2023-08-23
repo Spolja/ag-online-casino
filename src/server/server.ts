@@ -2,6 +2,8 @@ import { ApolloServer } from '@apollo/server'
 import { startStandaloneServer } from '@apollo/server/standalone'
 
 import { logger } from '../lib/logger'
+import { typeDefs } from '../lib/typedefs'
+import { UserResolver } from '../resolvers/user/graphql/user.resolver'
 
 import type { Context } from './context.type'
 
@@ -11,8 +13,10 @@ export class Server {
     constructor() {
         this.server = new ApolloServer<Context>({
             logger,
-            resolvers: [],
-            typeDefs: [],
+            resolvers: [
+                UserResolver,
+            ],
+            typeDefs,
         })
     }
 

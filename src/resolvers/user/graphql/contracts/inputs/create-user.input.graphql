@@ -1,0 +1,4 @@
+input CreateUserInput {
+    name: String!
+    balance: Float!
+}

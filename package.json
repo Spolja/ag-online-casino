@@ -14,9 +14,14 @@
     "lint:spelling": "cspell --no-progress --no-summary '**'",
     "test": "yarn test:unit & yarn test:integration",
     "test:integration": "jest --config test/integration/jest.config.ts",
-    "test:unit": "jest --config test/unit/jest.config.ts"
+    "test:unit": "jest --config test/unit/jest.config.ts",
+    "types:generate": "graphql-codegen"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@graphql-tools/load-files": "^7.0.0",
     "@rimac-technology/style-guide": "^8.1.0",
     "@types/eslint": "^8.44.2",
     "@types/jest": "^29.5.3",
