@@ -7,6 +7,7 @@ import { BetResolver } from '../resolvers/bet/graphql/bet.resolver'
 import { UserResolver } from '../resolvers/user/graphql/user.resolver'
 
 import type { Context } from './context'
+import { LoggerPlugin } from './logger-plugin'
 
 export class Server {
     private readonly server: ApolloServer<Context>
@@ -14,6 +15,7 @@ export class Server {
     constructor() {
         this.server = new ApolloServer<Context>({
             logger,
+            plugins: [LoggerPlugin],
             resolvers: [
                 UserResolver,
                 BetResolver,
@@ -26,8 +28,11 @@ export class Server {
         const { url } = await startStandaloneServer<Context>(this.server, {
             // eslint-disable-next-line @typescript-eslint/require-await
             context: async () => {
+                const startTime = Date.now()
+
                 return {
                     logger,
+                    startTime,
                 }
             },
         })

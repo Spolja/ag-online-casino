@@ -45,7 +45,10 @@
     "graphql-scalars": "^1.22.2",
     "pino": "^8.15.0",
     "pino-pretty": "^10.2.0",
+    "reflect-metadata": "^0.1.13",
     "sequelize": "^6.32.1",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.6",
+    "tsyringe": "^4.8.0",
+    "zod": "^3.22.2"
   }
 }

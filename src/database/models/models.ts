@@ -9,7 +9,7 @@ import {
     Model,
 } from 'sequelize'
 
-import { sequelize } from '../sequelize.client'
+import { SequelizeClient } from '../sequelize.client'
 
 export class Bet extends Model<InferAttributes<Bet>, InferCreationAttributes<Bet>> {
     declare public amount: number
@@ -62,7 +62,7 @@ Bet.init(
         },
     },
     {
-        sequelize,
+        sequelize: new SequelizeClient().client,
         tableName: 'bets',
     }
 )
@@ -104,7 +104,7 @@ User.init(
         },
     },
     {
-        sequelize,
+        sequelize: new SequelizeClient().client,
         tableName: 'users',
     }
 )
