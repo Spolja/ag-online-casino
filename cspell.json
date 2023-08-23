@@ -1,24 +1,10 @@
 {
-  "useGitignore": true,
-  "cache": {
-    "useCache": true,
-    "cacheStrategy": "content",
-    "cacheLocation": "./.cspellcache"
-  },
-  "ignorePaths": [
-    "package.json",
-    "TODO.md",
-    "LICENSE",
-    "**/__generated__",
-    "*.sqlite"
-  ],
-  "ignoreWords": [
-    "ancient-gaming",
-    "spoljo",
-    "codegen",
-    "pino",
-    "typedefs",
-    "DATEONLY",
-    "tsyringe"
-  ]
+    "useGitignore": true,
+    "cache": {
+        "useCache": true,
+        "cacheStrategy": "content",
+        "cacheLocation": "./.cspellcache"
+    },
+    "ignorePaths": ["package.json", "TODO.md", "LICENSE", "**/__generated__", "*.sqlite"],
+    "ignoreWords": ["ancient-gaming", "spoljo", "codegen", "pino", "typedefs", "DATEONLY", "tsyringe"]
 }

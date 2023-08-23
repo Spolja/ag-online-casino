@@ -19,11 +19,7 @@ export class SequelizeClient {
     }
 
     public async connect(): Promise<void> {
-        try {
-            await this.client.authenticate()
-            logger.info('Connection to the database established successfully!')
-        } catch {
-            throw new Error('Connection to the database couldn\'t be established')
-        }
+        await this.client.authenticate()
+        logger.info('Connection to the database established successfully!')
     }
 }

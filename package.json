@@ -1,54 +1,55 @@
 {
-  "name": "ag-online-casino",
-  "author": {
-    "name": "Luka Spoljaric - Spoljo",
-    "url": "https://github.com/Spolja/ag-online-casino"
-  },
-  "license": "MIT",
-  "description": "Online casino providing graphQL API for basic casino betting games",
-  "scripts": {
-    "dev": "ts-node src/index.ts",
-    "lint": "yarn lint:code & yarn lint:package-json & yarn lint:spelling",
-    "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
-    "lint:code": "eslint './**/*.{js,ts}' --quiet --cache --cache-strategy content --cache-location '.eslintcache/'",
-    "lint:spelling": "cspell --no-progress --no-summary '**'",
-    "test": "yarn test:unit & yarn test:integration",
-    "test:integration": "jest --config test/integration/jest.config.ts",
-    "test:unit": "jest --config test/unit/jest.config.ts",
-    "types:generate": "graphql-codegen"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.0",
-    "@graphql-codegen/typescript": "^4.0.1",
-    "@graphql-codegen/typescript-resolvers": "^4.0.1",
-    "@graphql-tools/load-files": "^7.0.0",
-    "@rimac-technology/style-guide": "^8.1.0",
-    "@types/eslint": "^8.44.2",
-    "@types/jest": "^29.5.3",
-    "@types/prettier": "^3.0.0",
-    "cspell": "^6.31.2",
-    "eslint": "^8.46.0",
-    "jest": "^29.6.3",
-    "npm-package-json-lint": "^7.0.0",
-    "prettier": "^3.0.0",
-    "ts-jest": "^29.1.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
-  },
-  "packageManager": "yarn@3.6.0",
-  "engines": {
-    "node": "^20"
-  },
-  "dependencies": {
-    "@apollo/server": "^4.9.1",
-    "graphql": "^16.8.0",
-    "graphql-scalars": "^1.22.2",
-    "pino": "^8.15.0",
-    "pino-pretty": "^10.2.0",
-    "reflect-metadata": "^0.1.13",
-    "sequelize": "^6.32.1",
-    "sqlite3": "^5.1.6",
-    "tsyringe": "^4.8.0",
-    "zod": "^3.22.2"
-  }
+    "name": "ag-online-casino",
+    "description": "Online casino providing graphQL API for basic casino betting games",
+    "license": "MIT",
+    "author": {
+        "name": "Luka Spoljaric - Spoljo",
+        "url": "https://github.com/Spolja/ag-online-casino"
+    },
+    "scripts": {
+        "dev": "ts-node src/index.ts",
+        "lint": "yarn lint:code & yarn lint:package-json & yarn lint:spelling & yarn lint:prettier",
+        "lint:code": "eslint './**/*.{js,ts}' --quiet --cache --cache-strategy content --cache-location '.eslintcache/'",
+        "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
+        "lint:prettier": "prettier --loglevel warn --check './**/*{yaml,yml,json,md,gql,graphql,css,prisma}'",
+        "lint:spelling": "cspell --no-progress --no-summary '**'",
+        "test": "yarn test:unit & yarn test:integration",
+        "test:integration": "jest --config test/integration/jest.config.ts",
+        "test:unit": "jest --config test/unit/jest.config.ts",
+        "types:generate": "graphql-codegen"
+    },
+    "dependencies": {
+        "@apollo/server": "^4.9.1",
+        "graphql": "^16.8.0",
+        "graphql-scalars": "^1.22.2",
+        "pino": "^8.15.0",
+        "pino-pretty": "^10.2.0",
+        "reflect-metadata": "^0.1.13",
+        "sequelize": "^6.32.1",
+        "sqlite3": "^5.1.6",
+        "tsyringe": "^4.8.0",
+        "zod": "^3.22.2"
+    },
+    "devDependencies": {
+        "@graphql-codegen/cli": "^5.0.0",
+        "@graphql-codegen/typescript": "^4.0.1",
+        "@graphql-codegen/typescript-resolvers": "^4.0.1",
+        "@graphql-tools/load-files": "^7.0.0",
+        "@rimac-technology/style-guide": "^8.1.0",
+        "@types/eslint": "^8.44.2",
+        "@types/jest": "^29.5.3",
+        "@types/prettier": "^3.0.0",
+        "cspell": "^6.31.2",
+        "eslint": "^8.46.0",
+        "jest": "^29.6.3",
+        "npm-package-json-lint": "^7.0.0",
+        "prettier": "^3.0.0",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "packageManager": "yarn@3.6.0",
+    "engines": {
+        "node": "^20"
+    }
 }
