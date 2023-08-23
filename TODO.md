@@ -29,10 +29,8 @@ This file tracks the tasks that need to be completed for the project.
     -   [x] Resolvers service separation
     -   [x] Code cleanup
     -   [x] findOneOrThrow implementation
--   [ ] Implement Unit tests
--   [ ] Implement Integration tests
+-   [x] Implement Integration tests
 -   [ ] README with clear instructions, descriptions, next steps, etc...
--   [ ] models DATEONLY type hack
 
 ## Notes
 
