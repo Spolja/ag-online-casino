@@ -1,4 +1,2 @@
 # AG Online Casino
-
-```shell
-yarn install
+### TO BE IMPLEMENTED...
