@@ -41,4 +41,5 @@ jobs:
                       .yarn/cache
                   key: node_modules-${{ hashFiles('**/yarn.lock') }}
             - run: yarn install
+            - run: yarn types:generate
             - run: yarn test
