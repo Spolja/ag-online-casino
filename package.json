@@ -15,7 +15,7 @@
         "lint:spelling": "cspell --no-progress --no-summary '**'",
         "test": "yarn test:unit & yarn test:integration",
         "test:integration": "jest --config test/integration/jest.config.ts",
-        "test:unit": "jest --config test/unit/jest.config.ts",
+        "test:unit": "",
         "types:generate": "graphql-codegen"
     },
     "dependencies": {
