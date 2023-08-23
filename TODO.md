@@ -12,11 +12,11 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Prettier setup
   - [x] Cspell setup
 - [x] Setup Jest
-- [ ] Setup CI/CD
-  - [ ] Install
-  - [ ] Lint
-  - [ ] Test
-  - [ ] Release
+- [x] Setup CI/CD
+  - [x] Lint
+  - [x] Test
+- [ ] Implementation
+  - Apollo Server setup
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
 - [ ] Research timestream advanced capabilities
