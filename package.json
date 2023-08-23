@@ -12,7 +12,7 @@
     "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
     "lint:code": "eslint './**/*.{js,ts}' --quiet --cache --cache-strategy content --cache-location '.eslintcache/'",
     "lint:spelling": "cspell --no-progress --no-summary '**'",
-    "test": "yarn test:unit & test:integration",
+    "test": "yarn test:unit & yarn test:integration",
     "test:integration": "jest --config test/integration/jest.config.ts",
     "test:unit": "jest --config test/unit/jest.config.ts"
   },
