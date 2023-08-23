@@ -33,5 +33,12 @@
   "packageManager": "yarn@3.6.0",
   "engines": {
     "node": "^20"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.9.1",
+    "graphql": "^16.8.0",
+    "graphql-scalars": "^1.22.2",
+    "pino": "^8.15.0",
+    "pino-pretty": "^10.2.0"
   }
 }

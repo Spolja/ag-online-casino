@@ -16,10 +16,10 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Lint
   - [x] Test
 - [ ] Implementation
-  - Apollo Server setup
+  - [x] Apollo Server setup
+  - [ ] Graphql contracts
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
-- [ ] Research timestream advanced capabilities
 - [ ] README with strict instructions
 
 ## Notes
