@@ -6,7 +6,7 @@ export const logger = pino({
             return { level: label.toUpperCase() }
         },
     },
-    level: 'info',
+    level: 'debug',
     transport: { target: 'pino-pretty' },
 })
 

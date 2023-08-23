@@ -1,25 +1,42 @@
+import { User } from '../../../database/models/User.model'
 import { logger } from '../../../lib/logger'
 import type { Resolvers } from '../../__generated__/graphqlTypes'
 
 export const UserQueries: Resolvers = {
     Query: {
-        getUser: () => {
+        getUser: async (_parent, args) => {
             logger.info('Fetching user...')
+            await User.sync()
+
+            const user = await User.findOne(
+                { attributes: ['id', 'balance', 'name'],
+                    where: { id: args.id } }
+            )
+
+            if (!user) {
+                throw new Error(`User with id: ${1} not present in the database`)
+            }
+
+            logger.info(JSON.stringify(user))
 
             return {
-                balance: 1,
-                id: 1,
-                name: 'Spoljo',
+                balance: user.balance,
+                id: user.id,
+                name: user.name,
             }
         },
-        getUserList: () => {
-            logger.info('Fetching user list...')
+        getUserList: async () => {
+            logger.info('Fetching users list...')
+            await User.sync()
+            const users = await User.findAll({ attributes: ['id', 'balance', 'name'] })
 
-            return [{
-                balance: 1,
-                id: 1,
-                name: 'Spoljo',
-            }]
+            return users.map((user) => {
+                return {
+                    balance: user.balance,
+                    id: user.id,
+                    name: user.name,
+                }
+            })
         },
     },
 }

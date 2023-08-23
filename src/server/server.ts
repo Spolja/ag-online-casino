@@ -5,7 +5,7 @@ import { logger } from '../lib/logger'
 import { typeDefs } from '../lib/typedefs'
 import { UserResolver } from '../resolvers/user/graphql/user.resolver'
 
-import type { Context } from './context.type'
+import type { Context } from './context'
 
 export class Server {
     private readonly server: ApolloServer<Context>
@@ -24,7 +24,9 @@ export class Server {
         const { url } = await startStandaloneServer<Context>(this.server, {
             // eslint-disable-next-line @typescript-eslint/require-await
             context: async () => {
-                return {}
+                return {
+                    logger,
+                }
             },
         })
         logger.info(`🚀🚀🚀 Online Casino server started on ${url}. 🚀🚀🚀`)

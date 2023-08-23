@@ -9,7 +9,8 @@
     "package.json",
     "TODO.md",
     "LICENSE",
-    "**/__generated__"
+    "**/__generated__",
+    "database.*"
   ],
   "ignoreWords": [
     "ancient-gaming",
