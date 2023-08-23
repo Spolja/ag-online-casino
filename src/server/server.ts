@@ -7,6 +7,7 @@ import { BetResolver } from '../resolvers/bet/graphql/bet.resolver'
 import { UserResolver } from '../resolvers/user/graphql/user.resolver'
 
 import type { Context } from './context'
+import { context } from './context'
 import { LoggerPlugin } from './logger-plugin'
 
 export class Server {
@@ -26,15 +27,7 @@ export class Server {
 
     public async start() {
         const { url } = await startStandaloneServer<Context>(this.server, {
-            // eslint-disable-next-line @typescript-eslint/require-await
-            context: async () => {
-                const startTime = Date.now()
-
-                return {
-                    logger,
-                    startTime,
-                }
-            },
+            context,
         })
         logger.info(`🚀🚀🚀 Online Casino server started on ${url}. 🚀🚀🚀`)
     }

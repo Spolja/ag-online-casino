@@ -7,7 +7,7 @@ import type {
 // Used to encapsulated NOT_FOUND logic, could be separated in a Repository class of its own
 export const findOneOrThrow = async <ModelType extends Model>(
     model: ModelStatic<ModelType>,
-    options: FindOptions,
+    options: FindOptions<ModelType>,
 ) => {
     const result = await model.findOne(options)
 

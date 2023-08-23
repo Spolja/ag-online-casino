@@ -17,6 +17,9 @@ node_modules/
 *.iml
 out
 
+# Generated files
+**/__generated__
+
 
 #Cache
 .eslintcache

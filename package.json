@@ -11,7 +11,7 @@
         "lint": "yarn lint:code & yarn lint:package-json & yarn lint:spelling & yarn lint:prettier",
         "lint:code": "eslint './**/*.{js,ts}' --quiet --cache --cache-strategy content --cache-location '.eslintcache/'",
         "lint:package-json": "npmPkgJsonLint --configFile ./.packagerc.js .",
-        "lint:prettier": "prettier --loglevel warn --check './**/*{yaml,yml,json,md,gql,graphql,css,prisma}'",
+        "lint:prettier": "prettier --log-level warn --check './**/*{yaml,yml,json,md,gql,graphql,css,prisma}'",
         "lint:spelling": "cspell --no-progress --no-summary '**'",
         "test": "yarn test:unit & yarn test:integration",
         "test:integration": "jest --config test/integration/jest.config.ts",

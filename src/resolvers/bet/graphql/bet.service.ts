@@ -14,26 +14,26 @@ export class BetService {
     constructor(private readonly database: SequelizeClient = container.resolve(SequelizeClient)) {}
 
     public async createBet(userId: number, amount: number, chance: number): Promise<Bet> {
-        const user = await findOneOrThrow<User>(User, { where: { id: userId } })
-        createBetMutationValidator.parse({ amount, balance: user.balance, chance, userId })
+        const user = await findOneOrThrow(User, { where: { id: userId } })
+        const validated = createBetMutationValidator.parse({ amount, balance: user.balance, chance, userId })
 
         // Could be further more simplified
         const win = Math.random() <= 0.5
 
         const bet = Bet.build({
-            amount,
-            chance,
+            amount: validated.amount,
+            chance: validated.chance,
             createdAt: new Date(),
-            payout: win ? (amount / chance) * 100 : 0,
+            payout: win ? (validated.amount / validated.chance) * 100 : 0,
             updatedAt: new Date(),
             userId,
             win,
         })
 
-        if (!bet.win) {
-            user.balance -= amount
-        } else {
+        if (bet.win) {
             user.balance += (bet.payout - bet.amount)
+        } else {
+            user.balance -= amount
         }
 
         await Promise.all([
@@ -72,7 +72,7 @@ export class BetService {
     }
 
     public async getBet(id: number): Promise<Bet> {
-        return findOneOrThrow<Bet>(Bet, { where: { id } })
+        return findOneOrThrow(Bet, { where: { id } })
     }
 
     public async getBetList(): Promise<Bet[]> {
@@ -80,6 +80,6 @@ export class BetService {
     }
 
     public async getBetUser(userId: number): Promise<User> {
-        return findOneOrThrow<User>(User, { where: { id: userId } })
+        return findOneOrThrow(User, { where: { id: userId } })
     }
 }

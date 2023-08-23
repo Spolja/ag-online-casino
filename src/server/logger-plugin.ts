@@ -14,7 +14,7 @@ export const LoggerPlugin: ApolloServerPlugin<Context> = {
         const endTime = Date.now()
         const startTime = requestContext.contextValue.startTime
 
-        if (operationName === 'IntrospectionQuery' || operationName === 'GetCurrentUser') {
+        if (operationName === 'IntrospectionQuery') {
             return
         }
 
