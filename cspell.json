@@ -8,10 +8,14 @@
   "ignorePaths": [
     "package.json",
     "TODO.md",
-    "LICENSE"
+    "LICENSE",
+    "**/__generated__"
   ],
   "ignoreWords": [
     "ancient-gaming",
-    "spoljo"
+    "spoljo",
+    "codegen",
+    "pino",
+    "typedefs"
   ]
 }

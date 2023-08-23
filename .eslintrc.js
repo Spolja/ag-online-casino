@@ -1,7 +1,7 @@
 module.exports = {
     extends: [require.resolve('@rimac-technology/style-guide/eslint/core')],
     ignorePatterns: [
-        '*.generated.*',
+        '**/__generated__',
         'dist',
         'node_modules',
     ],
