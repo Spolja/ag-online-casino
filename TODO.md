@@ -24,10 +24,11 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Setup database
     - [x] Setup orm/db
     - [x] Setup seed data
+  - [ ] Fine tune logging
   - [ ] Validations
   - [ ] Resolvers service separation
   - [ ] Code cleanup
-  - [ ] DATEONLY type hack
+  - [ ] models DATEONLY type hack
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
 - [ ] README with clear instructions

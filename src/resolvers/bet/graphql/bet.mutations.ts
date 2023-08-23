@@ -45,14 +45,7 @@ export const BetMutations: Resolvers = {
                 await user.save(),
             ])
 
-            return {
-                amount: bet.amount,
-                chance: bet.chance,
-                id: bet.id,
-                payout: bet.payout,
-                userId: bet.userId,
-                win: bet.win,
-            }
+            return bet
         },
     },
 }
