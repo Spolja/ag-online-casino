@@ -1,0 +1,9 @@
+type Bet {
+    id: Int!
+    userId: Int!
+    user: User
+    amount: Float!
+    chance: Float!
+    payout: Float!
+    win: Boolean!
+}

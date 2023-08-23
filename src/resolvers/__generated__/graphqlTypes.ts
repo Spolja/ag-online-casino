@@ -17,25 +17,46 @@ export type Scalars = {
   _FieldSet: { input: any; output: any; }
 };
 
-export type CreateUserInput = {
-  balance: Scalars['Float']['input'];
-  name: Scalars['String']['input'];
+export type Bet = {
+  __typename?: 'Bet';
+  amount: Scalars['Float']['output'];
+  chance: Scalars['Float']['output'];
+  id: Scalars['Int']['output'];
+  payout: Scalars['Float']['output'];
+  user?: Maybe<User>;
+  userId: Scalars['Int']['output'];
+  win: Scalars['Boolean']['output'];
 };
 
 export type Mutation = {
   __typename?: 'Mutation';
-  createUser: User;
+  createBet: Bet;
 };
 
 
-export type MutationCreateUserArgs = {
-  input?: InputMaybe<CreateUserInput>;
+export type MutationCreateBetArgs = {
+  amount: Scalars['Float']['input'];
+  chance: Scalars['Float']['input'];
+  userId: Scalars['Int']['input'];
 };
 
 export type Query = {
   __typename?: 'Query';
+  getBestBetsPerUser: Array<Bet>;
+  getBet?: Maybe<Bet>;
+  getBetList: Array<Bet>;
   getUser: User;
   getUserList: Array<User>;
+};
+
+
+export type QueryGetBestBetsPerUserArgs = {
+  limit: Scalars['Int']['input'];
+};
+
+
+export type QueryGetBetArgs = {
+  id: Scalars['Int']['input'];
 };
 
 
@@ -46,6 +67,7 @@ export type QueryGetUserArgs = {
 export type User = {
   __typename?: 'User';
   balance: Scalars['Float']['output'];
+  bets?: Maybe<Array<Bet>>;
   id: Scalars['Int']['output'];
   name: Scalars['String']['output'];
 };
@@ -121,45 +143,61 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
-  CreateUserInput: CreateUserInput;
+  Bet: ResolverTypeWrapper<Bet>;
   Float: ResolverTypeWrapper<Scalars['Float']['output']>;
-  String: ResolverTypeWrapper<Scalars['String']['output']>;
+  Int: ResolverTypeWrapper<Scalars['Int']['output']>;
+  Boolean: ResolverTypeWrapper<Scalars['Boolean']['output']>;
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
-  Int: ResolverTypeWrapper<Scalars['Int']['output']>;
   User: ResolverTypeWrapper<User>;
-  Boolean: ResolverTypeWrapper<Scalars['Boolean']['output']>;
+  String: ResolverTypeWrapper<Scalars['String']['output']>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
-  CreateUserInput: CreateUserInput;
+  Bet: Bet;
   Float: Scalars['Float']['output'];
-  String: Scalars['String']['output'];
+  Int: Scalars['Int']['output'];
+  Boolean: Scalars['Boolean']['output'];
   Mutation: {};
   Query: {};
-  Int: Scalars['Int']['output'];
   User: User;
-  Boolean: Scalars['Boolean']['output'];
+  String: Scalars['String']['output'];
+};
+
+export type BetResolvers<ContextType = any, ParentType extends ResolversParentTypes['Bet'] = ResolversParentTypes['Bet']> = {
+  amount?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  chance?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  payout?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
+  userId?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  win?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
-  createUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, Partial<MutationCreateUserArgs>>;
+  createBet?: Resolver<ResolversTypes['Bet'], ParentType, ContextType, RequireFields<MutationCreateBetArgs, 'amount' | 'chance' | 'userId'>>;
 };
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
+  getBestBetsPerUser?: Resolver<Array<ResolversTypes['Bet']>, ParentType, ContextType, RequireFields<QueryGetBestBetsPerUserArgs, 'limit'>>;
+  getBet?: Resolver<Maybe<ResolversTypes['Bet']>, ParentType, ContextType, RequireFields<QueryGetBetArgs, 'id'>>;
+  getBetList?: Resolver<Array<ResolversTypes['Bet']>, ParentType, ContextType>;
   getUser?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<QueryGetUserArgs, 'id'>>;
   getUserList?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType>;
 };
 
 export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
   balance?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  bets?: Resolver<Maybe<Array<ResolversTypes['Bet']>>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type Resolvers<ContextType = any> = {
+  Bet?: BetResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   User?: UserResolvers<ContextType>;

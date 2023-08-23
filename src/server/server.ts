@@ -3,6 +3,7 @@ import { startStandaloneServer } from '@apollo/server/standalone'
 
 import { logger } from '../lib/logger'
 import { typeDefs } from '../lib/typedefs'
+import { BetResolver } from '../resolvers/bet/graphql/bet.resolver'
 import { UserResolver } from '../resolvers/user/graphql/user.resolver'
 
 import type { Context } from './context'
@@ -15,6 +16,7 @@ export class Server {
             logger,
             resolvers: [
                 UserResolver,
+                BetResolver,
             ],
             typeDefs,
         })

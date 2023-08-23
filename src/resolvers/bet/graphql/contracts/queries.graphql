@@ -1,0 +1,5 @@
+type Query {
+    getBet(id: Int!): Bet
+    getBetList: [Bet!]!
+    getBestBetsPerUser(limit: Int!): [Bet!]!
+}

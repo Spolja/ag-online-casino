@@ -20,11 +20,14 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Graphql codegen
   - [x] Graphql contracts
     - [x] User
-    - [ ] Bet
-  - [ ] Setup database
-    - [ ] Setup orm/db
-    - [ ] Setup seed data
-  - [ ] Implement sequelize
+    - [x] Bet
+  - [x] Setup database
+    - [x] Setup orm/db
+    - [x] Setup seed data
+  - [ ] Validations
+  - [ ] Resolvers service separation
+  - [ ] Code cleanup
+  - [ ] DATEONLY type hack
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
 - [ ] README with clear instructions

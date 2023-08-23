@@ -10,13 +10,14 @@
     "TODO.md",
     "LICENSE",
     "**/__generated__",
-    "database.*"
+    "*.sqlite"
   ],
   "ignoreWords": [
     "ancient-gaming",
     "spoljo",
     "codegen",
     "pino",
-    "typedefs"
+    "typedefs",
+    "DATEONLY"
   ]
 }
