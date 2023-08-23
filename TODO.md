@@ -15,7 +15,7 @@ This file tracks the tasks that need to be completed for the project.
 - [x] Setup CI/CD
   - [x] Lint
   - [x] Test
-- [ ] Implementation
+- [x] Implementation
   - [x] Apollo Server setup
   - [x] Graphql codegen
   - [x] Graphql contracts
@@ -24,7 +24,7 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Setup database
     - [x] Setup orm/db
     - [x] Setup seed data
-  - [ ] Fine tune logging
+  - [x] Fine tune logging
   - [x] Validations
   - [x] Resolvers service separation
   - [x] Code cleanup
