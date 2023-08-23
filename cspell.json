@@ -1,0 +1,17 @@
+{
+  "useGitignore": true,
+  "cache": {
+    "useCache": true,
+    "cacheStrategy": "content",
+    "cacheLocation": "./.cspellcache"
+  },
+  "ignorePaths": [
+    "package.json",
+    "TODO.md",
+    "LICENSE"
+  ],
+  "ignoreWords": [
+    "ancient-gaming",
+    "spoljo"
+  ]
+}

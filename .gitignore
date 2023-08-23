@@ -1,0 +1,23 @@
+# Yarn not using Zero-Installs
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+
+# IntelliJ project files
+.idea/*
+*.iml
+out
+
+
+#Cache
+.eslintcache
+.cspellcache
