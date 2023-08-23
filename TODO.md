@@ -18,6 +18,7 @@ This file tracks the tasks that need to be completed for the project.
 - [ ] Implementation
   - [x] Apollo Server setup
   - [ ] Graphql contracts
+  - [ ] Graphql codegen
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
 - [ ] README with strict instructions
