@@ -17,11 +17,16 @@ This file tracks the tasks that need to be completed for the project.
   - [x] Test
 - [ ] Implementation
   - [x] Apollo Server setup
-  - [ ] Graphql contracts
-  - [ ] Graphql codegen
+  - [x] Graphql codegen
+  - [x] Graphql contracts
+    - [x] User
+    - [ ] Bet
+  - [ ] Setup database
+    - [ ] Setup seed data
+  - [ ] Implement sequelize
 - [ ] Implement Unit tests
 - [ ] Implement Integration tests
-- [ ] README with strict instructions
+- [ ] README with clear instructions
 
 ## Notes
 
