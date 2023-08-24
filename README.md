@@ -24,8 +24,6 @@ Server, GraphQL, Sequelize and more to provide a comprehensive platform for bett
 
 If you would like to start exploring the API as fast as possible follow the next steps
 
-1. Clone the repository:
-
 ```bash
 
    // Clone the project
