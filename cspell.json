@@ -6,5 +6,5 @@
         "cacheLocation": "./.cspellcache"
     },
     "ignorePaths": ["package.json", "TODO.md", "LICENSE", "**/__generated__", "*.sqlite"],
-    "ignoreWords": ["ancient-gaming", "spoljo", "codegen", "pino", "typedefs", "DATEONLY", "tsyringe"]
+    "ignoreWords": ["ancient-gaming", "spoljo", "codegen", "pino", "typedefs", "DATEONLY", "tsyringe", "transpiles"]
 }
