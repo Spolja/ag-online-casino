@@ -41,7 +41,7 @@ If you would like to start exploring the API as fast as possible follow the next
 
 Your GraphQL Playground should be running on http://localhost:4000/
 
-## Architectural Decisions
+## 🏗️ Architectural Decisions
 
 ### GraphQL schema first approach
 
@@ -104,7 +104,7 @@ NOTES:
 -   Test implementation logic is really basic and not all cases are covered
 -   createBet method is not being tested at all and this should be implemented after test-db separation has been done.
 
-## Usage
+## 📜 Usage
 
 Usage of the API can be achieved over GraphQL playground which becomes active after yarn dev is executed on url:
 http://localhost:4000/
@@ -180,7 +180,7 @@ fragment userFragment on User {
 
 ```
 
-## Future Improvements
+## 🛠️ Future Improvements
 
 Here is a list of future tasks and improvements that could/should be implemented for this project to be production ready
 
