@@ -4,7 +4,7 @@ Online casino providing a GraphQL API for basic casino betting games.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Table of Contents
+## 📓 Table of Contents
 
 -   [Description](#description)
 -   [Quick Start](#quick-start)
@@ -15,12 +15,12 @@ Online casino providing a GraphQL API for basic casino betting games.
 -   [Usage](#usage)
 -   [Future Improvements](#future-improvements)
 
-## Description
+## 📖 Description
 
 AG Online Casino is a project that offers a GraphQL API for basic casino betting games. It utilizes technologies like Apollo
 Server, GraphQL, Sequelize and more to provide a comprehensive platform for betting games.
 
-## Quick Start
+## 🚀 Quick Start
 
 If you would like to start exploring the API as fast as possible follow the next steps
 
@@ -50,7 +50,7 @@ resolvers in /graphql/resolver/contracts folder. This steps also includes implem
 .graphql contracts to .ts code which is located under src/resolvers/**generated** after running 'yarn types:generate' which is
 achieved by using library graphql-codegen-cli (https://www.npmjs.com/package/@graphql-codegen/cli)
 
-## Database Setup
+## 💾 Database Setup
 
 Database has 2 tables:
 
@@ -63,7 +63,7 @@ class.
 NOTE: Current database is pushed to the repository and is available at: ag-online-casino.sqlite, there are currently 3 users in
 the system ('Spoljo', 'Elena', 'Bruce Wayne')
 
-## Linter
+## 🛡️ Linter
 
 For linting our codebase we've used a combination of multiple tools that provide us with options to lint various types of files.
 
@@ -91,7 +91,7 @@ Scripts to run above code can be found in package.json defined as:
    yarn lint:prettier
 ```
 
-## Tests
+## 🧪 Tests
 
 For tests, I've decided to go with JEST and implemented a basic set of integration tests that cover basic functionalities. These
 tests leverage Apollo Servers 'executeOperation' method which enables us to send real graphql queries to the system, without
