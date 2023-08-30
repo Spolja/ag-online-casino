@@ -106,7 +106,7 @@ NOTES:
 
 ## 📜 Usage
 
-Usage of the API can be achieved over GraphQL playground which becomes active after yarn dev is executed on url:
+Usage of the API can be achieved via GraphQL playground which becomes active after yarn dev is executed on url:
 http://localhost:4000/
 
 Examples of the queries are as follows:
